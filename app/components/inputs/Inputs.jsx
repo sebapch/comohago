@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import styles from "./inputs.module.css";
+import styles from "./Inputs.module.css";
 
 let preguntas = [
   "¿Cuáles son los síntomas de la enfermedad X?",

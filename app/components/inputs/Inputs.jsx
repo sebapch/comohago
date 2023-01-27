@@ -39,6 +39,7 @@ const Inputs = () => {
   useEffect(() => {
     checkProgram()
     console.log(comosehace)
+    console.log('promt: ', prompt)
   }, [programa, comosehace])
   
   
@@ -58,9 +59,9 @@ const Inputs = () => {
     });
 
     const data = await response.json();
-    console.log(data.choices[0].text);
+    console.log(data);
 
-    setResult(data.choices[0].text);
+    setResult(data);
     setLoading(false);
   }
 

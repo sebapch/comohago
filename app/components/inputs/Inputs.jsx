@@ -38,8 +38,7 @@ const Inputs = () => {
 
   useEffect(() => {
     checkProgram()
-    console.log(comosehace)
-    console.log('promt: ', prompt)
+
   }, [programa, comosehace])
   
   
@@ -47,8 +46,6 @@ const Inputs = () => {
     setLoading(true);
     event.preventDefault();
 
-    console.log(programa);
-    console.log(prompt);
     const response = await fetch("https://api.openai.com/v1/completions", {
       method: "POST",
       headers: {
@@ -59,9 +56,9 @@ const Inputs = () => {
     });
 
     const data = await response.json();
-    console.log(data);
+   
 
-    setResult(data);
+    setResult(data.choices[0].text);
     setLoading(false);
   }
 

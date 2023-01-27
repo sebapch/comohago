@@ -7,8 +7,10 @@ export default function RootLayout({ children }) {
         <head /> will contain the components returned by the nearest parent
         head.jsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
       */}
-      <head />
-      <body>{children}</body>
+      <head>
+        <title>Como se hace?</title>
+      </head>
+      <body  className='bg-black'>{children}</body>
     </html>
   )
 }

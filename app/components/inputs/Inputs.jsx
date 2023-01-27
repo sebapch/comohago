@@ -52,7 +52,7 @@ const Inputs = () => {
         "Content-Type": "application/json",
         Authorization: `Bearer ${process.env.NEXT_PUBLIC_LLAVE_MAESTRA}`,
       },
-      body: `{"model": "text-davinci-003", "prompt": "quesos de tipo", "temperature": 0, "max_tokens": 600}`,
+      body: `{"model": "text-davinci-003", "prompt": "${prompt}", "temperature": 0, "max_tokens": 600}`,
     });
 
     const data = await response.json();
